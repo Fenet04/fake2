@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <title>Pet Listings - Pet Adoption Admin</title>
+</head>
+
+<body>
+
+    <div class="flex h-screen bg-almond text-Taude">
+        <div class="hidden lg:flex flex-col w-64 bg-coffee">
+            <nav class="bg-Taupe p-4 text-white md:pt-8">
+                <div class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-2xl font-semibold mt-4 md:mt-0">Pet Adoption</h1>
+                    <a href="#" class="lg:hidden hover:text-cream">Logout</a>
+                </div>
+            </nav>
+            <div class="p-4">
+                <h1 class="text-2xl font-semibold"></h1>
+            </div>
+            <ul class="flex-1">
+                <li class="p-4 hover:bg-cream">
+                    <a href="../dashboard.html" class="block">Dashboard</a>
+                </li>
+                <li class="p-4 hover:bg-cream">
+                    <a href="pets.html" class="block Active">Pet Listings</a>
+                </li>
+                <li class="p-4 ">
+                    <a  class="block"></a>
+                </li>
+                <li class="p-4 ">
+                    <a class="block"></a>
+                </li>
+            </ul>
+            <a href="#" class="hidden lg:inline-block hover:text-cream ">Logout</a>
+        </div>
+
+        
+        <div class="w-4/5 p-8 overflow-y-auto">
+            <h2 class="text-2xl font-semibold mb-4">Pet Listings</h2>
+
+            
+            <div id="animalsList" class="bg-white p-4 rounded shadow-md mb-8 flex">
+                
+            </div>
+            
+
+          
+            <button class="bg-Taupe text-white px-3 py-2 rounded hover:bg-mocha" onclick="toggleAddPetForm()">Add New Pet</button>
+
+            <div id="addPetForm" class="add-pet-form hidden bg-white p-4 rounded shadow-md mt-4">
+                <h2 class="text-2xl font-semibold mb-4">Add New Pet</h2>
+
+                <form id="petForm" class="grid grid-cols-2 gap-4" enctype="multipart/form-data">
+                    <label for="ID">Pet ID:</label>
+                    <input type="text" id="animalID" name="ID" required>
+
+                    <label for="name">Pet Name:</label>
+                    <input type="text" id="animalName" name="name" required>
+
+                    <label for="species">Species:</label>
+                    <input type="text" id="animalSpecies" name="species" required>
+
+                    <label for="breed">Breed:</label>
+                    <input type="text" id="animalBreed" name="breed" required>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="animalAge" name="age" required>
+
+                    <label for="gender">Gender:</label>
+                    <select id="animalGender" name="gender" required>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+
+                    <label for="adoptionStatus">Adoption Status:</label>
+                    <select id="animalAdoptionStatus" name="adoptionStatus" required>
+                        <option value="available">Available</option>
+                        <option value="pending">Pending</option>
+                        <option value="adopted">Adopted</option>
+                    </select>
+
+                    
+                    <label for="image">Image:</label>
+                    <input type="file" id="animalImage" name="image" accept="image/*"  required>
+
+                    <div class="col-span-2">
+                        <button type="button" onclick="addAnimal()"
+                            class="bg-Taupe text-white px-4 py-2 rounded hover:bg-mocha">Add Pet</button>
+                    </div>
+                </form>
+            </div>
+            <div id="editAnimalForm" class="bg-white p-4 rounded shadow-md mt-4 hidden">
+                <form id="editForm" class="grid grid-cols-2 gap-4" onsubmit="return false;" enctype="multipart/form-data">
+                    <label for="editAnimalID">Pet ID:</label>
+                    <input type="text" id="editAnimalID">
+
+                    <label for="editAnimalName">Name:</label>
+                    <input type="text" id="editAnimalName">
+
+                    <label for="editAnimalSpecies">Species:</label>
+                    <input type="text" id="editAnimalSpecies">
+
+                    <label for="editAnimalBreed">Breed:</label>
+                    <input type="text" id="editAnimalBreed">
+
+                    <label for="editAnimalAge">Age:</label>
+                    <input type="number" id="editAnimalAge">
+
+                    <label for="editAnimalGender">Gender:</label>
+                    <select id="editAnimalGender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+
+                    <label for="editAnimalAdoptionStatus">Adoption Status:</label>
+                    <select id="editAnimalAdoptionStatus" >
+                        <option value="available">Available</option>
+                        <option value="pending">Pending</option>
+                        <option value="adopted">Adopted</option>
+                    </select>
+    
+                    <label for="editAnimalImage">Image:</label>
+                    <input type="file" id="editAnimalImage" accept="image/*">
+               
+                    <button type="button" class="bg-Taupe text-white px-4 py-2 rounded hover:bg-mocha" onclick="updateAnimal()">Update Animal</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="lg:hidden fixed top-0 left-0">
+        <button id="toggle-sidebar" class="bg-Taupe text-white p-2 rounded">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejun="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <script src="../main.js"></script>
+
+</body>
+
+</html>

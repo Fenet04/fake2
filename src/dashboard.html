@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>pet adoption admin</title>
+</head>
+<body>
+   
+    <div class="flex h-screen bg-almond text-Taude">
+        <div class="hidden lg:flex flex-col w-64 bg-coffee">
+            <nav class="bg-Taupe p-4 text-white md:pt-8">
+                <div class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-2xl font-semibold mt-4 md:mt-0">Pet Adoption</h1>
+                    
+                </div>
+            </nav>
+            <div class="p-4">
+                <h1 class="text-2xl font-semibold"></h1>
+            </div>
+            <ul class="flex-1">
+                
+                <li class="p-4 hover:bg-cream Active">
+                    <a href="dashboard.html" class="block">Dashboard</a>
+                </li>
+                <li class="p-4 hover:bg-cream">
+                    <a href="pages/pets.html" class="block">Pet Listings</a>
+                </li>
+                <li class="p-4 ">
+                    <a  class="block"></a>
+                </li>
+                <li class="p-4">
+                    <a  class="block"></a>
+                </li>
+            </ul>
+            <a href="#" class="inline-block hover:text-cream ">Logout</a>
+        </div>
+
+    
+        <div class="w-4/5 p-8">
+            <h2 class="text-2xl font-semibold mb-4">Dashboard</h2>
+
+    
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-silver p-4 rounded shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Total Pets</h3>
+                    <p class="text-Taude">300</p>
+                </div>
+                <div class="bg-metal p-4 rounded shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Active Listings</h3>
+                    <p class="text-Taude">250</p>
+                </div>
+                <div class="bg-tahiti p-4 rounded shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Users</h3>
+                    <p class="text-Taude">150</p>
+                </div>
+                <div class="bg-forest p-4 rounded shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Pending Approvals</h3>
+                    <p class="text-Taude">20</p>
+                </div>
+            </div>
+
+        
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Pet Adoption Trends</h3>
+    
+                <div class="bg-white p-4 rounded shadow-md">
+
+                    <div id="petAdoptionChart" class="w-full h-40"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="lg:hidden fixed top-0 left-0">
+        <button id="toggle-sidebar" class="bg-Taupe text-white p-2 rounded mb-8">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
