@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Pal</title>
+    <link href="../frontend/src/output.css" rel="stylesheet">
+</head>
+<body class="bg-yellow-50 text-gray-700">
+    <div><!--content wrapper-->
+        <div>
+            <nav>
+                <h1 class="text-4xl font-semibold border-gray-200 pl-2 pt-2">Pet Pal</h1>
+                <div class="border-b pb-2">
+                    <button id="menu-toggle" class="sm:hidden text-2xl focus:outline-none pl-3">
+                        &#9776; 
+                    </button>
+                    <ul class="hidden sm:flex flex-col sm:flex-row justify-end" id="menu">
+                        <li>
+                            <a href="#home">
+                                <span class="text-xl font-semibold pl-4">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                <span class="text-xl font-semibold pl-4">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#adoption">
+                                <span class="text-xl font-semibold pl-4">Adoption</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                <span class="text-xl font-semibold pl-4 pr-2">Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav><!--end nav-->
+        </div>
+        <main class="px-14 py-6">
+            <div class="flex justify-end">
+                <a class="text-lg font-semibold cursor-pointer border-black border-2 rounded-lg p-1 hover:bg-yellow-200 hover:border-yellow-300" href="./login.html">Log in</a>
+                <a class="text-lg font-semibold ml-4 cursor-pointer border-black border-2 rounded-lg p-1 hover:bg-yellow-200 hover:border-yellow-300" href="./signup.html">Sign up</a>
+            </div>
+
+            <h2 id="home" class="text-3xl font-semibold mt-6">Welcome to our Pet Adoption center!🐾</h2>
+
+            <div class="flex flex-col md:flex-row"><!--home-->
+                <p class="text-lg mt-6 pb-2 pr-2">Welcome to Pet Pal, your Gateway to find your perfect pet buddy. Discover your perfect match among our diverse profiles of pets waiting for a forever home. With a straightforward adoption process, detailed pet profiles, and our dedicated support, finding your furry companion will be alot easier. Start your journey to a lifetime of joy today!</p>
+                <div>
+                    <img class ="w-auto h-auto rounded-xl shadow" src="img/cat&dog.jpg" alt="Cat & Dog image">
+                </div>
+            </div>
+
+            <h2 id="about" class="text-2xl font-semibold mt-6 pb-4">About Pet Pal</h2>
+
+            <div class="flex flex-col-reverse md:flex-row"><!--about us-->
+                <img class="w-auto h-auto rounded-xl shadow-md object-cover" src="img/groupwork.jpg" alt="teamwork">
+                <p class="text-lg pl-4">At Pet Pal adoption center, it is our passion to find loving homes for pets in need.  Since our organization was founded, we have only promoted adoption, and we firmly believe that every pet has a right to a peaceful and secure future. Our goal is to build enduring relationships that have a positive effect on adoptive families as well as pets. One adoption at a time, Ethio Pet Adoption is committed to changing lives via openness, kindness, and steadfast support. Come along with us as we create a community where each paw has a lifetime home.</p>
+            </div>
+
+            <h2 id="adoption" class="text-2xl font-semibold mt-16 pb-2 border-b border-gray-200">Adoption</h2>
+
+            <div class="flex flex-col md:flex-row lg:flex-row justify-between"><!--adoption-->
+                <div class="mt-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img class="w-full h-80 p-5 object-cover" src="img/bobby.jpg" alt="dog photo">
+                        <div>
+                            <span class="text-lg font-bold p-5 text-center">Bobby</span>
+                            <span class="font-semibold block p-2">Age = 2 years old</span>
+                            <span class="font-semibold block p-2">Breed = Corgi</span>
+                            <div class="font-semibold">
+                                <a href="./signup.html">
+                                    <div class="bg-yellow-200 text-center">Adopt</div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img class="w-full h-80 p-5 object-cover" src="img/wuro.jpg" alt="cat photo">
+                        <div>
+                            <span class="text-lg font-bold p-5">Wuro</span>
+                            <span class="font-semibold block p-2">Age = 1 years old</span>
+                            <span class="font-semibold block p-2">Breed = Bengala black and white</span>
+                            <div class="font-semibold">
+                                <a href="./signup">
+                                    <div class="bg-yellow-200 text-center">Adopt</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md">
+                        <img class="w-full h-80 p-5 object-cover" src="img/lulu.jpg" alt="bunny photo">
+                        <div>
+                            <span class="text-lg font-bold p-5">lulu</span>
+                            <span class="font-semibold block p-2">Age = 5 years old</span>
+                            <span class="font-semibold block p-2">Breed = Holland Hop</span>
+                            <div class="font-semibold block">
+                                <a href="./signup">
+                                    <div class="bg-yellow-200 text-center">Adopt</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="flex justify-center p-5">
+                <a href="./signup.html">
+                    <div class="bg-gray-200 text-lg text-gray-700 rounded-lg p-2 shadow-md cursor-pointer hover:bg-yellow-200 hover:border-yellow-300">Load more</div>
+                </a>
+            </div>
+
+            <h2 id="contact" class="text-2xl font-semibold mt-4 pb-2 border-t border-b-gray-200">Contact Us</h2>
+
+            <div class="flex flex-col sm"><!--contact us-->
+                <div>
+                    <p class="text-lg">Location: Megenagna, Addis Ababa</p>
+                </div>
+                <div>
+                    <p class="text-lg">Phone Number: +2519000000</p>
+                </div>
+                <div>
+                    <p class="text-lg">Email: @ethiopetadoption.com</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
+    
+</body>
+</html>
